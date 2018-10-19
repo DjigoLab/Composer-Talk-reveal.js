@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>reveal.js</title>
+	<title>Composer Talk - Secret Source</title>
 
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/mystyle.css">
@@ -27,10 +27,12 @@
 <body>
 	<div class="reveal">
 		<div class="slides">
+
 			<section data-transition="zoom">
 				<img src="./img/logo-composer-transparent.png" alt="Composer Logo">
 				<h2>The Dependency Manager for PHP</h2>
 			</section>
+
 			<section>
 				<h3>We are gonna see: </h3>
 				<ul>
@@ -40,8 +42,8 @@
 					<li class="fragment">cd</li>
 					<li class="fragment">de</li>
 				</ul>
-
 			</section>
+
 			<section data-transition="convex" class="manager-fight">
 				<section>
 					<h3>Package manager </br> VS <br> Dependecy Manager </h3>
@@ -122,14 +124,26 @@
 				<img class=" fragment fade-down code-1" onclick="zoomCode1Image()" src="./img/customrepo.PNG" alt="Custom repo">
 			</section>
 
+			<section>
+				<h3>But what about all this numbers?</h3>
+				<div>
+					<img class=" fragment fade-down code-1 " src=" ./img/version.PNG" alt="Dependency versions">
+				</div>
+			</section>
+
+
+
+
 			<section data-transition="concave" class="classes">
 				<h3>Define classes for a project</h3>
 				<p>You define any classes to autoload into your composer.json mapping <strong> namespaces </strong> and <strong>
 						directories </strong> </p>
-				<img class=" fragment fade-in code-1" onclick="zoomCode1Image()" src="./img/class.PNG" alt="Custom repo">
+				<img class=" fragment fade-in code-1" src="./img/class.PNG" alt="Custom repo">
 			</section>
+
 		</div>
 	</div>
+
 	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
 	 crossorigin="anonymous"></script>
 	<script src="lib/js/head.min.js"></script>
