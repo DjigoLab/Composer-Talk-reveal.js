@@ -1,0 +1,40 @@
+.manager-fight div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reveal .manager-fight img {
+  max-width: 200px;
+  border: none;
+  box-shadow: none;
+}
+.reveal .manager-fight img:first-child {
+  animation: fight 1.2s infinite;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+}
+
+.reveal .manager-fight img.no-anim {
+  animation: none;
+}
+.comparation ol li {
+  font-size: 32px;
+}
+.pack-m {
+  margin-bottom: 30px !important;
+}
+.code-1 {
+  max-width: 75% !important;
+  max-height: 75% !important;
+}
+
+@keyframes fight {
+  from {
+    margin-right: 60%;
+  }
+  to {
+    margin-right: -2%;
+  }
+}

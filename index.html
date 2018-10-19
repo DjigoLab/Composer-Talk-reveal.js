@@ -1,49 +1,156 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+	<title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/mystyle.css">
+	<link rel="stylesheet" href="css/theme/serif.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-transition="zoom">
+				<img src="./img/logo-composer-transparent.png" alt="Composer Logo">
+				<h2>The Dependency Manager for PHP</h2>
+			</section>
+			<section>
+				<h3>We are gonna see: </h3>
+				<ul>
+					<li class="fragment">What does Composer do?</li>
+					<li class="fragment">ab</li>
+					<li class="fragment">bc</li>
+					<li class="fragment">cd</li>
+					<li class="fragment">de</li>
+				</ul>
+
+			</section>
+			<section data-transition="convex" class="manager-fight">
+				<section>
+					<h3>Package manager </br> VS <br> Dependecy Manager </h3>
+					<div>
+						<img src="./img/npm.png" alt="NPM Logo">
+						<img src="./img/logo-composer-transparent.png" alt="">
+					</div>
+				</section>
+				<section>
+					<img class="no-anim" src="./img/npm.png" alt="NPM Logo">
+					<p>Is a collection of software tools that automate the process of installing, upgrading, configuring, and removing
+						computer programs for a computer's operating system in a consistent manner</p>
+				</section>
+				<section>
+					<img class="no-anim" src="./img/logo-composer-transparent.png" alt="">
+					<p>Is specific to project. You manage all dependencies for project and that dependencies going to be saved on your
+						project. When you start another project you should manage your dependencies again.</p>
+					<p class="fragment">
+						So...
+					</p>
+				</section>
+				<section>
+					<ul class="comparation">
+						<li class="pack-m">
+							Other package managers:
+							<ol>
+								<li>You have a project that depends on a number of libraries.</li>
+								<li>Some of those libraries depend on other libraries.</li>
+							</ol>
+						</li>
+						<li class="dept-m">
+							Composer:
+							<ol>
+								<li>Enables you to declare the libraries you depend on.</li>
+								<li>Finds out which versions of which packages can and need to be installed, and installs them (meaning it
+									downloads
+									them into your project).</li>
+							</ol>
+						</li>
+					</ul>
+				</section>
+			</section>
+
+			<section data-transition="concave">
+				<section>
+					<div>
+						<img class="code-1" onclick="zoomCode1Image()" src="./img/json part 1.PNG" alt="Composer json part 1">
+					</div>
+				</section>
+				<section>
+					<img src="./img/json part 2.PNG" alt="Composer json part 2">
+				</section>
+			</section>
+
+			<section data-transition="concave" class="autoloading">
+				<h3>Autoloading</h3>
+				<p>For libraries that specify autoload information, Composer generates a <strong> autoload.php file </strong>. You
+					can simply include this file and start using the classes that those libraries provide without any extra work:
+				</p>
+				<img class="code-1" onclick="zoomCode1Image()" src="./img/autoload.PNG" alt="Autoloading">
+			</section>
+
+			<section data-transition="concave" class="scripts">
+				<h3>Scripts</h3>
+				<p>In Composer's terms, can either be a PHP callback (defined as a static method) or any command-line
+					executable command. Scripts are useful for executing a package's custom code or package-specific commands during
+					the Composer execution process.
+				</p>
+				<img class=" fragment fade-up code-1" onclick="zoomCode1Image()" src="./img/script.PNG" alt="Scripts">
+				<p class=" fragment fade-up ">We have "pre-" and "post-" scripts.</p>
+			</section>
+
+			<section data-transition="concave" class="custom-repos">
+				<h3>Custom repositories</h3>
+				<p>By default Composer only uses the packagist repository. By specifying repositories you can get packages from
+					elsewhere.
+				</p>
+				<img class=" fragment fade-down code-1" onclick="zoomCode1Image()" src="./img/customrepo.PNG" alt="Custom repo">
+			</section>
+
+			<section data-transition="concave" class="classes">
+				<h3>Define classes for a project</h3>
+				<p>You define any classes to autoload into your composer.json mapping <strong> namespaces </strong> and <strong>
+						directories </strong> </p>
+				<img class=" fragment fade-in code-1" onclick="zoomCode1Image()" src="./img/class.PNG" alt="Custom repo">
+			</section>
 		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+	 crossorigin="anonymous"></script>
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+	<script src="js/zoom.js"></script>
+	<script src="js/zoomto.js"></script>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+
 </html>
